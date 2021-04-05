@@ -5,17 +5,17 @@ function ContentSlider(props) {
     const colors = [
         {
             colour: "#2FCC71",
-            img: require("../assets/food1.jpg"),
+            img: 'https://rizkymalm.com/assets/images/test/food1.jpg',
             text: "Desert"
         },
         {
             colour: "#FECD01",
-            img: require("../assets/food2.jpg"),
+            img: 'https://rizkymalm.com/assets/images/test/food2.jpg',
             text: "Snacks"
         },
         {
             colour: "#B8C9F1",
-            img: require("../assets/food3.jpg"),
+            img: 'https://rizkymalm.com/assets/images/test/food3.jpg',
             text: "Sweets"
         }
     ]
@@ -45,7 +45,7 @@ function ContentSlider(props) {
                                 backgroundColor: color.colour,
                                 borderRadius: 10
                             }}>
-                                <Image source={color.img} style={{width: "100%", height: "100%", borderRadius: 10}} />
+                                <Image source={{ uri: color.img}} style={{width: "100%", height: "100%", borderRadius: 10}} />
                                 <View style={{
                                     width: "100%",
                                     height: 50,

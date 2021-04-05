@@ -10,6 +10,7 @@ function Category(props) {
                     <Image source={require('../assets/icon/bestseller.png')} style={{
                                 width: "80%",
                             }} />
+                    <Text style={{fontSize: 14}}>Best Seller</Text>
                 </View>
             </TouchableNativeFeedback>
             <TouchableNativeFeedback>
@@ -17,13 +18,15 @@ function Category(props) {
                     <Image source={require('../assets/icon/nearme.png')} style={{
                                 width: "80%",
                             }} />
+                    <Text style={{fontSize: 14}}>Near Me</Text>
                 </View>
             </TouchableNativeFeedback>
             <TouchableNativeFeedback>
                 <View style={styles.contentCategory}>
-                    <Image source={require('../assets/icon/nearme.png')} style={{
+                    <Image source={require('../assets/icon/sale.png')} style={{
                                 width: "80%",
                             }} />
+                    <Text style={{fontSize: 14}}>Big Deals</Text>
                 </View>
             </TouchableNativeFeedback>
             
@@ -50,7 +53,8 @@ const styles = StyleSheet.create({
         borderWidth: StyleSheet.hairlineWidth,
         borderRadius: 10,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingBottom: 10
     }
 });
 

@@ -2,6 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, StatusBar, ScrollView, Dimensions, TouchableNativeFeedback } from 'react-native';
 
 function MainContent(props) {
+    const menu = [
+        {rating: 4.7, title: "Title Menu"},
+        {rating: 4.5, title: "Title Menu"},
+        {rating: 4.2, title: "Title Menu"},
+        {rating: 4.2, title: "Title Menu"},
+    ]
     return (
         <View style={{
             width: '100%',
@@ -13,74 +19,37 @@ function MainContent(props) {
             <Text style={styles.headerText}>Top Rated</Text>
             <Text style={styles.stdText}>Rated By User</Text>
             <View style={styles.wrapperBox}>
-                <TouchableNativeFeedback>
-                    <View style={styles.contentBox}>
-                        <Image source={require('../assets/menu/menu1.jpg')} style={{
-                            width: '100%',
-                            height: 150,
-                            borderRadius: 8
-                        }} />
-                        <View style={styles.descrtptionMenu}>
-                            <Text style={styles.headerText}>
-                                Title Menu
-                            </Text>
-                            <Text style={styles.stdText}>
-                                Title Menu
-                            </Text>
-                        </View>
-                    </View>
-                </TouchableNativeFeedback>
-                <TouchableNativeFeedback>
-                    <View style={styles.contentBox}>
-                        <Image source={require('../assets/menu/menu1.jpg')} style={{
-                            width: '100%',
-                            height: 150,
-                            borderRadius: 8
-                        }} />
-                        <View style={styles.descrtptionMenu}>
-                            <Text style={styles.headerText}>
-                                Title Menu
-                            </Text>
-                            <Text style={styles.stdText}>
-                                Title Menu
-                            </Text>
-                        </View>
-                    </View>
-                </TouchableNativeFeedback>
-                <TouchableNativeFeedback>
-                    <View style={styles.contentBox}>
-                        <Image source={require('../assets/menu/menu1.jpg')} style={{
-                            width: '100%',
-                            height: 150,
-                            borderRadius: 8
-                        }} />
-                        <View style={styles.descrtptionMenu}>
-                            <Text style={styles.headerText}>
-                                Title Menu
-                            </Text>
-                            <Text style={styles.stdText}>
-                                Title Menu
-                            </Text>
-                        </View>
-                    </View>
-                </TouchableNativeFeedback>
-                <TouchableNativeFeedback>
-                    <View style={styles.contentBox}>
-                        <Image source={require('../assets/menu/menu1.jpg')} style={{
-                            width: '100%',
-                            height: 150,
-                            borderRadius: 8
-                        }} />
-                        <View style={styles.descrtptionMenu}>
-                            <Text style={styles.headerText}>
-                                Title Menu
-                            </Text>
-                            <Text style={styles.stdText}>
-                                Title Menu
-                            </Text>
-                        </View>
-                    </View>
-                </TouchableNativeFeedback>
+
+                {
+                    menu.map((menu, index) => (
+                        <TouchableNativeFeedback>
+                            <View style={styles.contentBox}>
+                                <Image source={{uri: 'https://rizkymalm.com/assets/images/test/menu1.jpg'}} style={{
+                                    width: '100%',
+                                    height: 150,
+                                    borderRadius: 8
+                                }} />
+                                <View style={styles.descrtptionMenu}>
+                                    <Text style={styles.headerText}>
+                                        {menu.title}
+                                    </Text>
+                                    <View style={{
+                                        width: "100%",
+                                        flexDirection: 'row',
+                                        marginTop: 10
+                                    }}>
+                                        <Text style={styles.stdText}>{menu.rating}</Text>
+                                        <Image source={{uri: 'https://rizkymalm.com/assets/images/test/star_filled.png'}} style={{
+                                            width: 20,
+                                            height: 20,
+                                            marginLeft: 5
+                                        }} />
+                                    </View>
+                                </View>
+                            </View>
+                        </TouchableNativeFeedback>
+                    ))
+                }
             </View>
         </View>
     );

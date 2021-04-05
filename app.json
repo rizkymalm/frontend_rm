@@ -20,8 +20,9 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.rizkymalm.rm",
       "adaptiveIcon": {
-        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "foregroundImage": "./app/assets/logo.png",
         "backgroundColor": "#FFFFFF"
       }
     },

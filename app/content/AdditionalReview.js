@@ -5,8 +5,8 @@ import { StyleSheet, Text, View, Image, StatusBar, Dimensions, TextComponent, To
 function AdditionalReview(props) {
     const [defaultRating, setDefaultRating] = useState(0)
     const [maxRating, setmaxRating] = useState([1,2,3,4,5])
-    const starImgFilled = 'https://raw.githubusercontent.com/tranhonghan/images/main/star_filled.png'
-    const starImgCorner = 'https://raw.githubusercontent.com/tranhonghan/images/main/star_corner.png'
+    const starImgFilled = 'https://rizkymalm.com/assets/images/test/star_filled.png'
+    const starImgCorner = 'https://rizkymalm.com/assets/images/test/star_corner.png'
     const CustomRatingBar = () => {
         return(
             <View style={styles.CustomRatingBarStyle}>
